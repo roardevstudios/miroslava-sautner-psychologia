@@ -6,6 +6,10 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
+/**
+ * Design reminder — Blízkosť v rovnováhe:
+ * calm editorial wellness, warm organic composition, and clear human-first navigation.
+ */
 
 function Router() {
   return (
