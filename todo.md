@@ -1,0 +1,2 @@
+- [x] Verify the updated public-facing brand name in header and footer context.
+- [ ] Save the verified brand-name revision as a new checkpoint.
