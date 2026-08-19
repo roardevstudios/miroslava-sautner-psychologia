@@ -12,6 +12,7 @@ import {
   CircleArrowUp,
   Clock3,
   HeartHandshake,
+  Mail,
   Menu,
   MessageCircleMore,
   Phone,
@@ -20,6 +21,7 @@ import {
   X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import "./contact-delivery.css";
 
 const navigation = [
   { label: "O mne", href: "#o-mne" },
@@ -102,7 +104,25 @@ export default function Home() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const name = String(form.get("name") || "").trim();
+    const email = String(form.get("email") || "").trim();
+    const message = String(form.get("message") || "").trim();
+    const subject = `Nezáväzná správa z webu — ${name}`;
+    const body = [
+      "Dobrý deň,",
+      "",
+      "rada by som sa informovala o poradenstve.",
+      "",
+      `Meno: ${name}`,
+      `E-mail: ${email}`,
+      "",
+      "Správa:",
+      message,
+    ].join("\n");
+
     setSent(true);
+    window.location.href = `mailto:miroslavasautner@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -290,6 +310,7 @@ export default function Home() {
               <div className="contact-methods">
                 <div><Phone size={18} /><span><b>Online alebo osobne</b><small>Formu stretnutia si vyberiete podľa potrieb.</small></span></div>
                 <div><Clock3 size={18} /><span><b>Citlivý začiatok</b><small>Stačí stručne opísať, s čím prichádzate.</small></span></div>
+                <div><Mail size={18} /><span><b>E-mail</b><a href="mailto:miroslavasautner@gmail.com">miroslavasautner@gmail.com</a></span></div>
               </div>
             </div>
             <form className="contact-form reveal-up reveal-delay-1" onSubmit={handleSubmit}>
@@ -297,8 +318,9 @@ export default function Home() {
               <label>Vaše meno<input required name="name" type="text" placeholder="Ako vás môžem osloviť?" /></label>
               <label>E-mail<input required name="email" type="email" placeholder="vas@email.sk" /></label>
               <label>Čo by ste chceli riešiť?<textarea required name="message" placeholder="Nemusí to byť dokonale sformulované." rows={4} /></label>
-              <div className="form-actions"><button type="submit" className="button-primary button-dark">Odoslať správu <Send size={17} /></button><small>Odoslanie formulára pripojte k zabezpečenému e-mailu pred publikovaním.</small></div>
-              {sent && <p className="form-message"><Check size={17} /> Ďakujem — formulár je pripravený na pripojenie bezpečného odosielania.</p>}
+              <input className="form-honeypot" name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+              <div className="form-actions"><button type="submit" className="button-primary button-dark">Pripraviť e-mail <Send size={17} /></button><small>Otvorí sa váš e-mail s pripravenou správou pre miroslavasautner@gmail.com.</small></div>
+              {sent && <p className="form-message"><Check size={17} /> Správa je pripravená vo vašej e-mailovej aplikácii — stačí ju odoslať.</p>}
             </form>
           </div>
         </section>

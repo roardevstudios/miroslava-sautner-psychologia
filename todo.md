@@ -2,3 +2,13 @@
 - [ ] Save the verified brand-name revision as a new checkpoint.
 - [x] Verify that Miroslava Sautner is used consistently across all public-facing labels.
 - [ ] Save the verified Miroslava Sautner revision as a new checkpoint.
+- [x] Add miroslavasautner@gmail.com as the visible contact address.
+- [x] Configure secure delivery of inquiry-form submissions to miroslavasautner@gmail.com.
+- [ ] Test the inquiry form and save the completed update.
+- [x] Identify an authenticated browser-accessible email-delivery setup.
+- [x] Add the email address to the website and configure the chosen browser-based delivery path.
+- [x] Create and deploy the authorized Google workspace form-mail handler.
+- [ ] Test a live inquiry submission delivered to miroslavasautner@gmail.com.
+- [x] Provide the user with a copy-and-paste guide for the Apps Script editor.
+- [x] Attempt a fully automated browser-native code update.
+- [x] Apply an automated email contact fallback if direct form delivery remains unavailable.

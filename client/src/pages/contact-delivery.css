@@ -1,0 +1,27 @@
+/* Design reminder — Blízkosť v rovnováhe:
+ * The contact details remain quiet and warm; delivery mechanics are intentionally invisible.
+ */
+.contact-methods a {
+  color: #c5d0c8;
+  font-size: 0.66rem;
+  width: max-content;
+  text-decoration: underline;
+  text-decoration-color: rgba(229, 164, 123, 0.6);
+  text-underline-offset: 3px;
+  transition: color 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.contact-methods a:hover {
+  color: #e5a47b;
+}
+
+.form-honeypot,
+.form-delivery-frame {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  left: -10000px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  border: 0 !important;
+}
