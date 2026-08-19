@@ -111,9 +111,9 @@ export default function Home() {
 
       <header className={`site-header ${scrolled ? "site-header-scrolled" : ""}`}>
         <div className="shell header-inner">
-          <a href="#uvod" className="brand" aria-label="Mirka Sautner — úvod" onClick={closeMenu}>
+          <a href="#uvod" className="brand" aria-label="Miroslava Sautner — úvod" onClick={closeMenu}>
             <img src="/manus-storage/mirka-logo-mark_f33f967d.png" alt="" className="brand-mark" />
-            <span className="brand-name">Mirka Sautner</span>
+            <span className="brand-name">Miroslava Sautner</span>
             <span className="brand-label">psychologička</span>
           </a>
 
@@ -306,11 +306,11 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="shell footer-top">
-          <a href="#uvod" className="brand brand-footer"><img src="/manus-storage/mirka-logo-mark_f33f967d.png" alt="" className="brand-mark" /><span className="brand-name">Mirka Sautner</span><span className="brand-label">psychologička</span></a>
+          <a href="#uvod" className="brand brand-footer"><img src="/manus-storage/mirka-logo-mark_f33f967d.png" alt="" className="brand-mark" /><span className="brand-name">Miroslava Sautner</span><span className="brand-label">psychologička</span></a>
           <p>Priestor pre rozhovory, ktoré vám pomôžu nájsť väčšiu zrozumiteľnosť a oporu.</p>
           <a href="#uvod" className="back-top" aria-label="Späť hore"><CircleArrowUp size={27} /></a>
         </div>
-        <div className="shell footer-bottom"><span>© {new Date().getFullYear()} Mirka Sautner</span><span>Psychologické poradenstvo</span><span>Ochrana súkromia doplní sa pred publikovaním</span></div>
+        <div className="shell footer-bottom"><span>© {new Date().getFullYear()} Miroslava Sautner</span><span>Psychologické poradenstvo</span><span>Ochrana súkromia doplní sa pred publikovaním</span></div>
       </footer>
     </div>
   );

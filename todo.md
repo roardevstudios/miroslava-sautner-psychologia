@@ -1,2 +1,4 @@
 - [x] Verify the updated public-facing brand name in header and footer context.
 - [ ] Save the verified brand-name revision as a new checkpoint.
+- [x] Verify that Miroslava Sautner is used consistently across all public-facing labels.
+- [ ] Save the verified Miroslava Sautner revision as a new checkpoint.
