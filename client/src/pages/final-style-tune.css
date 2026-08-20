@@ -1,0 +1,194 @@
+/*
+ * Design reminder — Blízkosť v rovnováhe:
+ * Dusty rose leads the emotional palette; deep fir is a calm anchor.
+ * Overlapping arcs express connection, boundaries, movement, and growth.
+ */
+
+.header-cta,
+.mobile-nav-cta {
+  background: var(--rose);
+  border-radius: 999px 6px 6px 999px;
+  padding: .7rem 1rem;
+}
+
+.header-cta:hover,
+.mobile-nav-cta:hover {
+  background: var(--rose-deep);
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  border-radius: 999px 7px 7px 999px;
+  box-shadow: 3px 3px 0 rgba(37, 55, 47, .26);
+  padding: .9rem 1.12rem;
+}
+
+.button-primary:hover {
+  box-shadow: 1px 1px 0 rgba(37, 55, 47, .22);
+  transform: translate(2px, 2px);
+}
+
+.services-section {
+  background: #f0e2d9;
+  color: var(--forest);
+  overflow: hidden;
+  position: relative;
+}
+
+.services-section::before,
+.services-section::after {
+  border: 1.5px solid rgba(180, 90, 83, .48);
+  border-bottom: 0;
+  border-radius: 50% 50% 0 0;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+}
+
+.services-section::before {
+  height: 250px;
+  left: -210px;
+  top: 64px;
+  width: 470px;
+}
+
+.services-section::after {
+  bottom: 112px;
+  height: 165px;
+  right: -108px;
+  width: 280px;
+}
+
+.services-section .services-heading,
+.services-section .services-list {
+  position: relative;
+  z-index: 1;
+}
+
+.services-section .eyebrow-light,
+.services-section .service-number {
+  color: var(--rose);
+}
+
+.services-section .services-heading > p,
+.services-section .service-main p {
+  color: var(--leaf);
+}
+
+.services-section .services-list,
+.services-section .service-row {
+  border-color: rgba(180, 90, 83, .32);
+}
+
+.services-section .service-link {
+  color: var(--rose-deep);
+}
+
+.services-section .service-image,
+.services-section .service-illustration {
+  box-shadow: 5px 5px 0 rgba(180, 90, 83, .18);
+}
+
+.services-section .service-illustration {
+  background: var(--paper);
+  color: var(--rose);
+}
+
+.services-section .service-illustration .arch {
+  border-color: currentColor;
+}
+
+.article-card-2 .article-art {
+  background: #e9d7d0;
+  color: var(--rose-deep);
+}
+
+.contact-rose-shape {
+  border-color: rgba(234, 212, 201, .78);
+  border-width: 1.5px;
+}
+
+.contact-rose-shape::after {
+  border-color: rgba(234, 212, 201, .47);
+}
+
+.contact-methods {
+  border-top-color: rgba(234, 212, 201, .35);
+}
+
+.contact-methods > div {
+  color: var(--rose-pale);
+}
+
+.contact-form {
+  box-shadow: 10px 10px 0 var(--rose);
+}
+
+.button-primary.button-dark {
+  background: var(--rose);
+}
+
+.button-primary.button-dark:hover {
+  background: var(--rose-deep);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 560px) {
+  .services-section::before { left: -325px; }
+  .services-section::after { right: -180px; }
+}
+
+/* The global style sheet is loaded after page CSS in development; #root keeps this deliberate refinement authoritative. */
+#root .header-cta,
+#root .mobile-nav-cta {
+  background: var(--rose);
+  border-radius: 999px 6px 6px 999px;
+}
+
+#root .button-primary {
+  border-radius: 999px 7px 7px 999px;
+  box-shadow: 3px 3px 0 rgba(37, 55, 47, .26);
+  padding: .9rem 1.12rem;
+}
+
+#root .services-section {
+  background: #f0e2d9;
+  color: var(--forest);
+}
+
+#root .services-section .eyebrow-light,
+#root .services-section .service-number {
+  color: var(--rose);
+}
+
+#root .services-section .services-heading > p,
+#root .services-section .service-main p {
+  color: var(--leaf);
+}
+
+#root .services-section .services-list,
+#root .services-section .service-row {
+  border-color: rgba(180, 90, 83, .32);
+}
+
+#root .services-section .service-link {
+  color: var(--rose-deep);
+}
+
+#root .services-section .service-image,
+#root .services-section .service-illustration {
+  box-shadow: 5px 5px 0 rgba(180, 90, 83, .18);
+}
+
+#root .services-section .service-illustration {
+  background: var(--paper);
+  color: var(--rose);
+}
+
+#root .article-card-2 .article-art {
+  background: #e9d7d0;
+  color: var(--rose-deep);
+}
+
+#root .contact-form { box-shadow: 10px 10px 0 var(--rose); }
+#root .button-primary.button-dark { background: var(--rose); }

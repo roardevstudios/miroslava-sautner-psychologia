@@ -12,3 +12,10 @@
 - [x] Provide the user with a copy-and-paste guide for the Apps Script editor.
 - [x] Attempt a fully automated browser-native code update.
 - [x] Apply an automated email contact fallback if direct form delivery remains unavailable.
+- [ ] Identify why the current contact form does not complete delivery.
+- [ ] Replace the broken contact flow with a tested reliable delivery route.
+- [ ] Confirm a test inquiry reaches miroslavasautner@gmail.com.
+- [ ] Restore access to the EmailJS account setup and complete sender configuration.
+- [ ] Select and implement an independent contact method that does not require an owner OAuth approval.
+- [ ] Open the sender-authorization page and guide the user through the required approval.
+- [ ] Complete the Gmail sender connection and configure direct inquiry delivery under the granted authorization.

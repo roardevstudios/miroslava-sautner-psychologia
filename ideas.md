@@ -1,4 +1,4 @@
-# Návrhové smery — Mirka Popov
+# Návrhové smery — Miroslava Sautner
 
 ## Tri možné prístupy
 
@@ -56,7 +56,7 @@ Príklady:
 > „Nájdeme priestor pre to, na čom vám vo vzťahoch záleží.“
 
 ### Slovná značka a logo
-Značku tvorí abstraktný symbol dvoch mäkkých, čiastočne sa prekrývajúcich oblúkov v jednom kontinuálnom ťahu. Naznačuje kontakt a zachovaný vlastný priestor; je použiteľný samostatne vo favicone aj vedľa slovnej značky „Mirka Popov“.
+Značku tvorí abstraktný symbol dvoch mäkkých, čiastočne sa prekrývajúcich oblúkov v jednom kontinuálnom ťahu. Naznačuje kontakt a zachovaný vlastný priestor; je použiteľný samostatne vo favicone aj vedľa slovnej značky „Miroslava Sautner“.
 
 ### Podpisová farba značky
 **Prašná šípková — `#B45A53`**.
@@ -66,3 +66,5 @@ Značku tvorí abstraktný symbol dvoch mäkkých, čiastočne sa prekrývajúci
 - Veľké nadpisy zostávajú redakčné a výrazné, no s dostatočným rozostupom písmen pre pokojné čítanie v slovenčine.
 - Kontinuálny motív oblúkov je hlavný ornament značky: nenápadne prepája sekcie a pripomína vzťah, hranice, pohyb a rast.
 - Ilustrácie a abstraktné prvky zostávajú v jednej hrejivej editoriálnej estetike s oblými výrezmi, interiérovým svetlom a tlmenými prírodnými farbami.
+- Prašná šípková je opakujúcim sa citovým akcentom každej hlavnej časti; hlboká jedľová slúži najmä ako pokojné ukotvenie pre kontakt a pätičku.
+- Každé tlačidlo je tichým pozvaním k jednému zvládnuteľnému kroku, s mäkkým asymetrickým tvarom a bez agresívneho kontrastu či ťažkých tieňov.

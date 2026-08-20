@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import "./contact-delivery.css";
+import "./final-style-tune.css";
 
 const navigation = [
   { label: "O mne", href: "#o-mne" },
@@ -72,6 +73,12 @@ const articles = [
   },
 ];
 
+const emailDelivery = {
+  serviceId: "service_ozngprp",
+  templateId: "template_z18egpf",
+  publicKey: "c_VtBx9odZ6G1C1Qw",
+};
+
 function PaperScribble({ className = "" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 164 87" fill="none" aria-hidden="true">
@@ -92,7 +99,7 @@ function LineSprout({ className = "" }: { className?: string }) {
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [deliveryState, setDeliveryState] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 16);
@@ -102,27 +109,42 @@ export default function Home() {
 
   const closeMenu = () => setMenuOpen(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const form = new FormData(event.currentTarget);
+    const formElement = event.currentTarget;
+    const form = new FormData(formElement);
     const name = String(form.get("name") || "").trim();
     const email = String(form.get("email") || "").trim();
     const message = String(form.get("message") || "").trim();
-    const subject = `Nezáväzná správa z webu — ${name}`;
-    const body = [
-      "Dobrý deň,",
-      "",
-      "rada by som sa informovala o poradenstve.",
-      "",
-      `Meno: ${name}`,
-      `E-mail: ${email}`,
-      "",
-      "Správa:",
-      message,
-    ].join("\n");
+    const botField = String(form.get("website") || "").trim();
 
-    setSent(true);
-    window.location.href = `mailto:miroslavasautner@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    if (botField) return;
+
+    setDeliveryState("sending");
+
+    try {
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service_id: emailDelivery.serviceId,
+          template_id: emailDelivery.templateId,
+          user_id: emailDelivery.publicKey,
+          template_params: {
+            name,
+            email,
+            message,
+          },
+        }),
+      });
+
+      if (!response.ok) throw new Error("Email delivery failed");
+
+      formElement.reset();
+      setDeliveryState("sent");
+    } catch {
+      setDeliveryState("error");
+    }
   };
 
   return (
@@ -319,8 +341,9 @@ export default function Home() {
               <label>E-mail<input required name="email" type="email" placeholder="vas@email.sk" /></label>
               <label>Čo by ste chceli riešiť?<textarea required name="message" placeholder="Nemusí to byť dokonale sformulované." rows={4} /></label>
               <input className="form-honeypot" name="website" type="text" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-              <div className="form-actions"><button type="submit" className="button-primary button-dark">Pripraviť e-mail <Send size={17} /></button><small>Otvorí sa váš e-mail s pripravenou správou pre miroslavasautner@gmail.com.</small></div>
-              {sent && <p className="form-message"><Check size={17} /> Správa je pripravená vo vašej e-mailovej aplikácii — stačí ju odoslať.</p>}
+              <div className="form-actions"><button type="submit" className="button-primary button-dark" disabled={deliveryState === "sending"}>{deliveryState === "sending" ? "Odosielam…" : "Odoslať správu"} <Send size={17} /></button><small>Správa bude odoslaná priamo na miroslavasautner@gmail.com.</small></div>
+              {deliveryState === "sent" && <p className="form-message"><Check size={17} /> Ďakujem — vaša správa bola odoslaná.</p>}
+              {deliveryState === "error" && <p className="form-message form-message-error">Správu sa nepodarilo odoslať. Napíšte priamo na miroslavasautner@gmail.com.</p>}
             </form>
           </div>
         </section>
