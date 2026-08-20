@@ -31,19 +31,29 @@ const navigation = [
   { label: "Kontakt", href: "#kontakt" },
 ];
 
+const portableImageBase = "https://raw.githubusercontent.com/samkomedved319-dev/miroslava-sautner-psychologia-assets/main";
+
+const images = {
+  hero: `${portableImageBase}/hero-counselling.png`,
+  portrait: `${portableImageBase}/about-portrait.png`,
+  logo: `${portableImageBase}/logo-mark.png`,
+  parenting: `${portableImageBase}/parenting.png`,
+  relationships: `${portableImageBase}/relationships.png`,
+};
+
 const services = [
   {
     number: "01",
     title: "Vzťahy a komunikácia",
     copy: "Keď si v rozhovoroch prestávame rozumieť, môžeme spolu hľadať slová, hranice a nové možnosti blízkosti.",
-    image: "/manus-storage/mirka-relationships_4656b325.png",
+    image: images.relationships,
     alt: "Ilustrácia dvoch ľudí v pokojnom rozhovore",
   },
   {
     number: "02",
     title: "Rodičovstvo a výchova",
     copy: "Podpora pre chvíle, keď je doma veľa emócií, otázok alebo únavy a chcete sa vrátiť k tomu podstatnému.",
-    image: "/manus-storage/mirka-parenting_d05679d5.png",
+    image: images.parenting,
     alt: "Ilustrácia rodiča a dieťaťa pri spoločnej práci",
   },
   {
@@ -127,7 +137,7 @@ export default function Home() {
       <header className={`site-header ${scrolled ? "site-header-scrolled" : ""}`}>
         <div className="shell header-inner">
           <a href="#uvod" className="brand" aria-label="Miroslava Sautner — úvod" onClick={closeMenu}>
-            <img src="/manus-storage/mirka-logo-mark_f33f967d.png" alt="" className="brand-mark" />
+            <img src={images.logo} alt="" className="brand-mark" />
             <span className="brand-name">Miroslava Sautner</span>
             <span className="brand-label">psychologička</span>
           </a>
@@ -166,7 +176,7 @@ export default function Home() {
             </div>
             <div className="hero-art reveal-up reveal-delay-1">
               <div className="hero-art-frame">
-                <img src="/manus-storage/mirka-hero-counselling_cc3d1a95.png" alt="Pokojný rozhovor psychologičky s klientkou" />
+                <img src={images.hero} alt="Pokojný rozhovor psychologičky s klientkou" />
                 <div className="hero-corner-note"><span>01</span><p>Bezpečný priestor<br />pre dôležité témy.</p></div>
               </div>
               <div className="hero-rose-disc" />
@@ -199,7 +209,7 @@ export default function Home() {
           <div className="shell about-layout">
             <div className="about-image-wrap reveal-up">
               <div className="about-arc" />
-              <img src="/manus-storage/mirka-about-portrait_f613e7ca.png" alt="Ilustrácia psychologičky Mirky Popov v konzultačnom priestore" className="about-image" />
+              <img src={images.portrait} alt="Ilustrácia psychologičky Miroslavy Sautner v konzultačnom priestore" className="about-image" />
               <span className="about-stamp">M<span>P</span></span>
             </div>
             <div className="about-copy reveal-up reveal-delay-1">
@@ -286,7 +296,7 @@ export default function Home() {
 
         <section className="trust-section">
           <div className="shell trust-grid reveal-up">
-            <div className="trust-mark"><img src="/manus-storage/mirka-logo-mark_f33f967d.png" alt="" /></div>
+            <div className="trust-mark"><img src={images.logo} alt="" /></div>
             <div>
               <span className="section-index">03 / DÔVERA</span>
               <p>„Každý rozhovor môže byť začiatkom malého posunu — nie preto, že máme rýchlu odpoveď, ale preto, že na otázku už nie ste sami.“</p>
@@ -323,7 +333,7 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="shell footer-top">
-          <a href="#uvod" className="brand brand-footer"><img src="/manus-storage/mirka-logo-mark_f33f967d.png" alt="" className="brand-mark" /><span className="brand-name">Miroslava Sautner</span><span className="brand-label">psychologička</span></a>
+          <a href="#uvod" className="brand brand-footer"><img src={images.logo} alt="" className="brand-mark" /><span className="brand-name">Miroslava Sautner</span><span className="brand-label">psychologička</span></a>
           <p>Priestor pre rozhovory, ktoré vám pomôžu nájsť väčšiu zrozumiteľnosť a oporu.</p>
           <a href="#uvod" className="back-top" aria-label="Späť hore"><CircleArrowUp size={27} /></a>
         </div>
