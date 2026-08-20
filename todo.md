@@ -19,10 +19,10 @@
 - [x] Select and implement an independent contact method that does not require an owner OAuth approval.
 - [x] Open the sender-authorization page and guide the user through the required approval.
 - [x] Complete the Gmail sender connection and configure direct inquiry delivery under the granted authorization.
-- [ ] Check repository instructions and exclude generated or local-only files from publication.
-- [ ] Create a private GitHub repository and push the verified website source.
-- [ ] Confirm the Vercel build settings and required static-asset handling.
-- [ ] Explain the Vercel import and deployment process, including the EmailJS origin configuration required for the form.
+- [x] Check repository instructions and exclude generated or local-only files from publication.
+- [x] Create a private GitHub repository and push the verified website source.
+- [x] Confirm the Vercel build settings and required static-asset handling.
+- [ ] Explain the Vercel import and deployment process, including the static-image migration required for the form-free Vercel site.
 - [x] Remove the EmailJS-powered delivery route and its request limit from the contact form.
 - [x] Retain a browser-native e-mail draft path to miroslavasautner@gmail.com.
 - [x] Test the revised contact interaction and production build.
