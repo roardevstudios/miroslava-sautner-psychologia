@@ -26,9 +26,9 @@
 - [x] Remove the EmailJS-powered delivery route and its request limit from the contact form.
 - [x] Retain a browser-native e-mail draft path to miroslavasautner@gmail.com.
 - [x] Test the revised contact interaction and production build.
-- [ ] Push the revised source to the private GitHub repository.
+- [x] Push the revised source to the private GitHub repository.
 - [x] Inventory every Manus-only image reference used by the website.
 - [x] Publish portable copies of all site illustrations for Vercel delivery.
 - [x] Replace all `/manus-storage/` image paths with portable hosted URLs.
-- [ ] Build and push the full image repair to GitHub.
-- [ ] Verify images on https://miroslava-sautner-psychologia.vercel.app/#uvod.
+- [x] Build and push the full image repair to GitHub.
+- [x] Verify images on https://miroslava-sautner-psychologia.vercel.app/#uvod.
