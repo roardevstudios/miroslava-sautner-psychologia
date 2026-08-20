@@ -72,6 +72,10 @@ The corrected browser request returned **HTTP 200 / OK** from EmailJS with the v
 
 The final browser test completed successfully. EmailJS returned HTTP 200 / `OK`; the form reset all three fields and displayed **„Ďakujem — vaša správa bola odoslaná.“**. Automatic delivery to `miroslavasautner@gmail.com` and the corresponding visitor feedback are now verified end to end.
 
+## Updated delivery decision
+
+The practice owner requested removal of the external EmailJS delivery path because its monthly request limit is not appropriate for the website. The contact form now prepares a browser-native `mailto:` draft addressed to `miroslavasautner@gmail.com`, preserving the visitor’s name, e-mail, and message without consuming any third-party sending quota. The visitor reviews and sends the resulting e-mail in their own e-mail program.
+
 EmailJS confirmed that the service cannot be created until the Google account connection is completed. The only remaining blocker is the Google OAuth consent interaction opened by **Connect Account**; no service or email has been created yet.
 
 ## Independent alternative

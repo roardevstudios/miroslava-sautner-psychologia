@@ -1,21 +1,29 @@
 - [x] Verify the updated public-facing brand name in header and footer context.
-- [ ] Save the verified brand-name revision as a new checkpoint.
+- [x] Save the verified brand-name revision as a new checkpoint.
 - [x] Verify that Miroslava Sautner is used consistently across all public-facing labels.
-- [ ] Save the verified Miroslava Sautner revision as a new checkpoint.
+- [x] Save the verified Miroslava Sautner revision as a new checkpoint.
 - [x] Add miroslavasautner@gmail.com as the visible contact address.
 - [x] Configure secure delivery of inquiry-form submissions to miroslavasautner@gmail.com.
-- [ ] Test the inquiry form and save the completed update.
+- [x] Test the inquiry form and save the completed update.
 - [x] Identify an authenticated browser-accessible email-delivery setup.
 - [x] Add the email address to the website and configure the chosen browser-based delivery path.
 - [x] Create and deploy the authorized Google workspace form-mail handler.
-- [ ] Test a live inquiry submission delivered to miroslavasautner@gmail.com.
+- [x] Test a live inquiry submission delivered to miroslavasautner@gmail.com.
 - [x] Provide the user with a copy-and-paste guide for the Apps Script editor.
 - [x] Attempt a fully automated browser-native code update.
 - [x] Apply an automated email contact fallback if direct form delivery remains unavailable.
-- [ ] Identify why the current contact form does not complete delivery.
-- [ ] Replace the broken contact flow with a tested reliable delivery route.
-- [ ] Confirm a test inquiry reaches miroslavasautner@gmail.com.
-- [ ] Restore access to the EmailJS account setup and complete sender configuration.
-- [ ] Select and implement an independent contact method that does not require an owner OAuth approval.
-- [ ] Open the sender-authorization page and guide the user through the required approval.
-- [ ] Complete the Gmail sender connection and configure direct inquiry delivery under the granted authorization.
+- [x] Identify why the current contact form does not complete delivery.
+- [x] Replace the broken contact flow with a tested reliable delivery route.
+- [x] Confirm a test inquiry reaches miroslavasautner@gmail.com.
+- [x] Restore access to the EmailJS account setup and complete sender configuration.
+- [x] Select and implement an independent contact method that does not require an owner OAuth approval.
+- [x] Open the sender-authorization page and guide the user through the required approval.
+- [x] Complete the Gmail sender connection and configure direct inquiry delivery under the granted authorization.
+- [ ] Check repository instructions and exclude generated or local-only files from publication.
+- [ ] Create a private GitHub repository and push the verified website source.
+- [ ] Confirm the Vercel build settings and required static-asset handling.
+- [ ] Explain the Vercel import and deployment process, including the EmailJS origin configuration required for the form.
+- [x] Remove the EmailJS-powered delivery route and its request limit from the contact form.
+- [x] Retain a browser-native e-mail draft path to miroslavasautner@gmail.com.
+- [x] Test the revised contact interaction and production build.
+- [ ] Push the revised source to the private GitHub repository.
