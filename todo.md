@@ -32,3 +32,6 @@
 - [x] Replace all `/manus-storage/` image paths with portable hosted URLs.
 - [x] Build and push the full image repair to GitHub.
 - [x] Verify images on https://miroslava-sautner-psychologia.vercel.app/#uvod.
+- [x] Audit every rendered image request on the Vercel production site.
+- [x] Identify and repair each missing or blocked image asset.
+- [x] Push the complete image repair and re-verify the Vercel production page.
