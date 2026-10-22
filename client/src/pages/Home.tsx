@@ -31,14 +31,14 @@ const navigation = [
   { label: "Kontakt", href: "#kontakt" },
 ];
 
-const portableImageBase = "https://raw.githubusercontent.com/samkomedved319-dev/miroslava-sautner-psychologia-assets/main";
+const portableImageBase = "/images";
 
 const images = {
-  hero: `${portableImageBase}/hero-counselling.png`,
-  portrait: `${portableImageBase}/about-portrait.png`,
-  logo: `${portableImageBase}/logo-mark.png`,
-  parenting: `${portableImageBase}/parenting.png`,
-  relationships: `${portableImageBase}/relationships.png`,
+  hero: `${portableImageBase}/hero-counselling.webp`,
+  portrait: `${portableImageBase}/about-portrait.webp`,
+  logo: `${portableImageBase}/logo-mark-v2.png`,
+  parenting: `${portableImageBase}/parenting.webp`,
+  relationships: `${portableImageBase}/relationships.webp`,
 };
 
 const services = [

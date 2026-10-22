@@ -36,3 +36,7 @@
 - [x] Identify and repair each missing or blocked image asset.
 - [x] Push the complete image repair and re-verify the Vercel production page.
 - [x] Add page metadata, structured service data, robots.txt, and sitemap.xml for search discovery.
+- [x] Regenerate the five website images as one warm editorial illustration set and preserve the supplied PNG originals.
+- [x] Optimize the updated images to a combined 1.25 MB and package them with the Vercel site to avoid private-repository image requests.
+- [x] Refresh the favicon and Open Graph preview image and write a concise brand guide for social and print use.
+- [ ] Complete and verify the refreshed Vercel production deployment.
