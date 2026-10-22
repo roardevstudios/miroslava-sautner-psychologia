@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://miroslava-sautner-psychologia.vercel.app/sitemap.xml
