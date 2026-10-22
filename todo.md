@@ -35,3 +35,4 @@
 - [x] Audit every rendered image request on the Vercel production site.
 - [x] Identify and repair each missing or blocked image asset.
 - [x] Push the complete image repair and re-verify the Vercel production page.
+- [x] Add page metadata, structured service data, robots.txt, and sitemap.xml for search discovery.
