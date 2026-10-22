@@ -70,16 +70,22 @@ const articles = [
     category: "VZŤAHY",
     title: "Hranice nie sú múr. Sú informáciou o tom, na čom mi záleží.",
     date: "Čítanie na 4 minúty",
+    image: "/images/article-relationships.webp",
+    imageAlt: "Dve keramické šálky s priestorom medzi nimi na ružovom stole",
   },
   {
     category: "RODIČOVSTVO",
     title: "Keď dieťa nereaguje tak, ako by sme potrebovali.",
     date: "Čítanie na 5 minút",
+    image: "/images/article-parenting.webp",
+    imageAlt: "Dieťa kreslí domček a dospelý mu pokojne drží priestor",
   },
   {
     category: "KOMUNIKÁCIA",
     title: "Ako sa v náročnom rozhovore neprestať počúvať.",
     date: "Čítanie na 3 minúty",
+    image: "/images/article-communication.webp",
+    imageAlt: "Dvaja ľudia pri rozhovore, jeden pozorne počúva druhého",
   },
 ];
 
@@ -285,7 +291,10 @@ export default function Home() {
           <div className="shell articles-grid">
             {articles.map((article, index) => (
               <article className={`article-card article-card-${index + 1} reveal-up`} key={article.title}>
-                <div className="article-art"><span>{String(index + 1).padStart(2, "0")}</span><PaperScribble /><div /></div>
+                <div className="article-art">
+                  <img src={article.image} alt={article.imageAlt} loading="lazy" />
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                </div>
                 <p className="article-category">{article.category}</p>
                 <h3>{article.title}</h3>
                 <div className="article-meta"><span>{article.date}</span><a href="#kontakt" aria-label={`Prečítať článok: ${article.title}`}><ArrowRight size={18} /></a></div>

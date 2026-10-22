@@ -190,5 +190,36 @@
   color: var(--rose-deep);
 }
 
+#root .article-art {
+  background: var(--rose-pale);
+}
+
+#root .article-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms cubic-bezier(.2, .7, .2, 1);
+}
+
+#root .article-card:hover .article-art img {
+  transform: scale(1.035);
+}
+
+#root .article-art span {
+  left: .85rem;
+  top: .85rem;
+  padding: .32rem .42rem;
+  background: rgba(248, 244, 236, .9);
+  color: var(--forest);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #root .article-art img {
+    transition: none;
+  }
+}
+
 #root .contact-form { box-shadow: 10px 10px 0 var(--rose); }
 #root .button-primary.button-dark { background: var(--rose); }
