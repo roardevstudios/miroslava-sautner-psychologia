@@ -39,6 +39,7 @@ const images = {
   logo: `${portableImageBase}/logo-mark-v2.png`,
   parenting: `${portableImageBase}/parenting.webp`,
   relationships: `${portableImageBase}/relationships.webp`,
+  school: `${portableImageBase}/article-parenting.webp`,
 };
 
 const services = [
@@ -60,8 +61,8 @@ const services = [
     number: "03",
     title: "Deti a škola",
     copy: "Priestor na pomenovanie školských ťažkostí, stresu, vzťahov s rovesníkmi aj toho, čo dieťa potrebuje, aby sa cítilo istejšie.",
-    image: null,
-    alt: "Abstraktná ilustrácia rastu a bezpečného priestoru",
+    image: images.school,
+    alt: "Dieťa kreslí dom a slnko pri dospelom, ktorý je nablízku",
   },
 ];
 
